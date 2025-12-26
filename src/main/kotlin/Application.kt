@@ -1,6 +1,9 @@
 package temp.dev
 
+import io.ktor.http.*
 import io.ktor.server.application.*
+import io.ktor.server.plugins.cors.routing.*
+import io.ktor.server.plugins.ratelimit.*
 import temp.dev.routes.configureRoutes
 
 fun main(args: Array<String>) {
@@ -8,5 +11,11 @@ fun main(args: Array<String>) {
 }
 
 fun Application.module() {
-    configureRoutes()
+    install(CORS)
+    {
+        anyHost()
+        allowHeader(HttpHeaders.ContentType)
+    }
+    install(RateLimit)
+    configureRoutes ()
 }
