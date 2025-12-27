@@ -1,6 +1,8 @@
 package temp.dev
 
 import configureDatabases
+import configureNegotiation
+import configureValidation
 import createScheme
 import io.ktor.server.application.*
 import org.jetbrains.exposed.sql.SchemaUtils.createDatabase
@@ -14,6 +16,8 @@ fun Application.module() {
     configureDatabases()
     configureCors()
     createScheme()
+    configureValidation()
 //    configureRateLimit()
     configureRoutes ()
+    configureNegotiation()
 }

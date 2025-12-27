@@ -14,12 +14,12 @@ fun createScheme(){
 //            it[email] = "marioguzman140@gmail.com"
 //            it[password] = "12345678"
 //        } get UserTable.id
-        UserTable.select(UserTable.name, UserTable.email)
+        UserTable.select(UserTable.id, UserTable.name, UserTable.email)
             .where{
-                UserTable.name like "jose%"
+                UserTable.name like "mari%"
             }.
             forEach {
-            println("${it[UserTable.name]}: ${it[UserTable.email]}")
+            println("${it[UserTable.id]} ${it[UserTable.name]}: ${it[UserTable.email]}")
         }
 
 

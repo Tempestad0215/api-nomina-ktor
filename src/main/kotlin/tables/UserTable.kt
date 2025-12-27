@@ -1,12 +1,12 @@
 package tables
 
 import enums.ModelStatusEnum
-import org.jetbrains.exposed.dao.id.IntIdTable
+import org.jetbrains.exposed.dao.id.UUIDTable
 
 
 const val MAX_VARCHAR_LENGTH = 128
 
-object UserTable: IntIdTable("users") {
+object UserTable: UUIDTable("users") {
     val name = varchar("name", MAX_VARCHAR_LENGTH)
     val email = varchar("email", MAX_VARCHAR_LENGTH).uniqueIndex()
     val password = varchar("password", 255)

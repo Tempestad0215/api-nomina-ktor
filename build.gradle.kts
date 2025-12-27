@@ -28,4 +28,10 @@ dependencies {
     implementation("io.ktor:ktor-server-rate-limit:${ktor_version}")
     implementation("org.jetbrains.exposed:exposed-jdbc:0.50.1")
     implementation("mysql:mysql-connector-java:8.0.33")
+    implementation("io.ktor:ktor-server-request-validation:${ktor_version}")
+    implementation("io.ktor:ktor-server-content-negotiation:${ktor_version}")
+    implementation("io.ktor:ktor-serialization-kotlinx-json:${ktor_version}")
+    implementation("io.ktor:ktor-serialization-kotlinx-xml:${ktor_version}")
+    testImplementation("io.ktor:ktor-server-test-host:${ktor_version}")
+    testImplementation("org.jetbrains.kotlin:kotlin-test:${kotlin_version}")
 }
