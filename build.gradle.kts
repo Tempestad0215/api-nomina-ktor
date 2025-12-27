@@ -26,4 +26,6 @@ dependencies {
     implementation("io.ktor:ktor-server-openapi:${ktor_version}")
     implementation("io.ktor:ktor-server-cors:${ktor_version}")
     implementation("io.ktor:ktor-server-rate-limit:${ktor_version}")
+    implementation("org.jetbrains.exposed:exposed-jdbc:0.50.1")
+    implementation("mysql:mysql-connector-java:8.0.33")
 }
